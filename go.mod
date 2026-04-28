@@ -5,7 +5,7 @@ go 1.23.0
 require (
 	github.com/authzed/authzed-go v1.5.0
 	github.com/gin-gonic/gin v1.10.0
-	google.golang.org/grpc v1.74.0
+	google.golang.org/grpc v1.73.0
 	google.golang.org/protobuf v1.36.6
 )
 
