@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/spicedb/spicedb-go/spicedb/cache"
-	"github.com/spicedb/spicedb-go/spicedb/types"
+	"github.com/Yasiruofficial/events-authz/spicedb/cache"
+	"github.com/Yasiruofficial/events-authz/spicedb/types"
 
 	v1 "github.com/authzed/authzed-go/proto/authzed/api/v1"
 	authzed "github.com/authzed/authzed-go/v1"

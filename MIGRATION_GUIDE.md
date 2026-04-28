@@ -15,7 +15,7 @@ This guide helps you migrate from the old HTTP service to the new SpiceDB librar
 Import the library into your application:
 
 ```go
-import "github.com/spicedb/spicedb-go/spicedb"
+import "github.com/Yasiruofficial/events-authz/spicedb"
 ```
 
 **Benefits:**
@@ -139,8 +139,8 @@ func main() {
 
 **After (Library):**
 ```go
-import "github.com/spicedb/spicedb-go/spicedb"
-import "github.com/spicedb/spicedb-go/spicedb/types"
+import "github.com/Yasiruofficial/events-authz/spicedb"
+import "github.com/Yasiruofficial/events-authz/spicedb/types"
 
 func main() {
     client, _ := spicedb.NewClientWithDefaults("localhost:50051", "devkey")
@@ -279,7 +279,7 @@ if spicedb.IsValidationError(err) {
 
 ## Breaking Changes
 
-1. **Module Path**: `events-authz` → `github.com/spicedb/spicedb-go`
+1. **Module Path**: `events-authz` → `github.com/Yasiruofficial/events-authz`
 2. **Package Structure**: `internal/` packages → public `spicedb/` package
 3. **Type Names**: `model.CheckRequest` → `types.CheckRequest`
 4. **Error Handling**: Custom checks → `IsValidationError()`, `IsOperationError()`
@@ -342,7 +342,7 @@ git checkout v1-old-service
 import "events-authz/internal/spicedb"
 
 // New
-import "github.com/spicedb/spicedb-go/spicedb"
+import "github.com/Yasiruofficial/events-authz/spicedb"
 ```
 
 ### Issue: Type Mismatches

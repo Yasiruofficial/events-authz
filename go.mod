@@ -1,4 +1,4 @@
-module github.com/spicedb/spicedb-go
+module github.com/Yasiruofficial/events-authz
 
 go 1.25.0
 

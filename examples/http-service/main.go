@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/Yasiruofficial/events-authz/spicedb"
+	"github.com/Yasiruofficial/events-authz/spicedb/types"
 	"github.com/gin-gonic/gin"
-	"github.com/spicedb/spicedb-go/spicedb"
-	"github.com/spicedb/spicedb-go/spicedb/types"
 )
 
 func main() {

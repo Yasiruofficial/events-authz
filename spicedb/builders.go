@@ -3,7 +3,7 @@ package spicedb
 import (
 	"context"
 
-	"github.com/spicedb/spicedb-go/spicedb/types"
+	"github.com/Yasiruofficial/events-authz/spicedb/types"
 )
 
 // CheckPermissionBuilder provides a fluent interface for building permission checks

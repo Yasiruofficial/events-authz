@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/spicedb/spicedb-go/spicedb/types"
+	"github.com/Yasiruofficial/events-authz/spicedb/types"
 )
 
 // TestClientOptions verifies client creation with different configurations

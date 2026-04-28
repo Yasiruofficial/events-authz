@@ -11,7 +11,7 @@ Get the SpiceDB Go Library up and running in 5 minutes!
 ## Installation
 
 ```bash
-go get github.com/spicedb/spicedb-go
+go get github.com/Yasiruofficial/events-authz
 ```
 
 ## 1. Start SpiceDB (Development)
@@ -33,8 +33,8 @@ import (
 	"context"
 	"log"
 
-	"github.com/spicedb/spicedb-go/spicedb"
-	"github.com/spicedb/spicedb-go/spicedb/types"
+	"github.com/Yasiruofficial/events-authz/spicedb"
+	"github.com/Yasiruofficial/events-authz/spicedb/types"
 )
 
 func main() {

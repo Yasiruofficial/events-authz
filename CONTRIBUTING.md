@@ -14,7 +14,7 @@ Thank you for your interest in contributing! We welcome contributions of all kin
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/spicedb/spicedb-go.git
+git clone https://github.com/Yasiruofficial/events-authz.git
 cd spicedb-go
 ```
 

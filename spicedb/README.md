@@ -1,7 +1,7 @@
 # SpiceDB Go Library
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/spicedb/spicedb-go.svg)](https://pkg.go.dev/github.com/spicedb/spicedb-go)
-[![Go Report Card](https://goreportcard.com/badge/github.com/spicedb/spicedb-go)](https://goreportcard.com/report/github.com/spicedb/spicedb-go)
+[![Go Reference](https://pkg.go.dev/badge/github.com/Yasiruofficial/events-authz.svg)](https://pkg.go.dev/github.com/Yasiruofficial/events-authz)
+[![Go Report Card](https://goreportcard.com/badge/github.com/Yasiruofficial/events-authz)](https://goreportcard.com/report/github.com/Yasiruofficial/events-authz)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 A production-ready Go library for interacting with [SpiceDB](https://authzed.com/spicedb) authorization service. This library provides a clean, idiomatic Go API for permission checks, relationship management, and resource lookups.
@@ -21,7 +21,7 @@ A production-ready Go library for interacting with [SpiceDB](https://authzed.com
 ## Installation
 
 ```bash
-go get github.com/spicedb/spicedb-go
+go get github.com/Yasiruofficial/events-authz
 ```
 
 ## Quick Start
@@ -35,8 +35,8 @@ import (
 	"context"
 	"log"
 
-	"github.com/spicedb/spicedb-go/spicedb"
-	"github.com/spicedb/spicedb-go/spicedb/types"
+	"github.com/Yasiruofficial/events-authz/spicedb"
+	"github.com/Yasiruofficial/events-authz/spicedb/types"
 )
 
 func main() {
@@ -362,7 +362,7 @@ This library is licensed under the Apache License 2.0 - see the LICENSE file for
 ## Support
 
 For issues, questions, or contributions:
-- Report bugs on [GitHub Issues](https://github.com/spicedb/spicedb-go/issues)
+- Report bugs on [GitHub Issues](https://github.com/Yasiruofficial/events-authz/issues)
 - Join our [community Slack](https://authzed.com/community)
 - Visit the [SpiceDB documentation](https://authzed.com/docs)
 

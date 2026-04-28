@@ -5,8 +5,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/spicedb/spicedb-go/spicedb"
-	"github.com/spicedb/spicedb-go/spicedb/types"
+	"github.com/Yasiruofficial/events-authz/spicedb"
+	"github.com/Yasiruofficial/events-authz/spicedb/types"
 )
 
 // BasicExample demonstrates basic permission checks

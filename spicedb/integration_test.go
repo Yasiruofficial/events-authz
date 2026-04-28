@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/spicedb/spicedb-go/spicedb/types"
+	"github.com/Yasiruofficial/events-authz/spicedb/types"
 )
 
 // TestIntegration provides integration tests with a real SpiceDB instance
