@@ -1,34 +1,45 @@
 package http
 
 import (
-	"events-authz/internal/model"
-	"events-authz/internal/service"
+	"context"
+	"errors"
+	"github.com/spicedb/spicedb-go/internal/model"
+	"github.com/spicedb/spicedb-go/internal/spicedb"
 
 	"github.com/gin-gonic/gin"
 )
 
 type Handler struct {
-	svc *service.AuthzService
+	svc serviceChecker
 }
 
-func NewHandler(s *service.AuthzService) *Handler {
+type serviceChecker interface {
+	Check(ctx context.Context, req model.CheckRequest) (model.CheckResponse, error)
+}
+
+func NewHandler(s serviceChecker) *Handler {
 	return &Handler{svc: s}
 }
 
 func (h *Handler) Check(c *gin.Context) {
 	var req model.CheckRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
-		c.String(400, "invalid request")
+		c.JSON(400, gin.H{"error": "invalid request body"})
 		return
 	}
 
 	allowed, err := h.svc.Check(c.Request.Context(), req)
 	if err != nil {
-		c.String(500, "error")
+		if errors.Is(err, spicedb.ErrInvalidCheckRequest) {
+			c.JSON(400, gin.H{"error": err.Error()})
+			return
+		}
+
+		c.JSON(502, gin.H{"error": "authorization backend error"})
 		return
 	}
 
-	c.JSON(200, model.CheckResponse{Allowed: allowed})
+	c.JSON(200, allowed)
 }
 
 func (h *Handler) Health(c *gin.Context) {
