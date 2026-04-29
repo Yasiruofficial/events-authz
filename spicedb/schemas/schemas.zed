@@ -1,0 +1,27 @@
+definition user {}
+
+definition group {
+  relation member: user
+}
+
+definition portal {
+  relation admin: user
+  relation viewer: user
+  relation admin_group: group
+  relation viewer_group: group
+
+  permission read = admin + viewer + admin_group->member + viewer_group->member
+  permission manage_users = admin + admin_group->member
+  permission manage_events = admin + admin_group->member
+}
+
+definition event {
+  relation organizer: user
+  relation coordinator: user
+  relation admin_group: group
+  relation viewer_group: group
+  relation portal: portal
+
+  permission view = organizer + coordinator + portal->read + viewer_group->member + admin_group->member
+  permission manage = organizer + portal->admin + admin_group->member
+}
