@@ -1,0 +1,10 @@
+definition user {}
+
+definition organization {}
+
+definition tenant {
+  relation org: organization
+
+  relation member: user
+  relation admin: user
+}

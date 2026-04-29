@@ -1,0 +1,9 @@
+definition tenant {
+  relation org: organization
+
+  relation admin: user
+  relation member: user
+
+  permission view = member or admin or org->member
+  permission manage = admin or org->admin
+}

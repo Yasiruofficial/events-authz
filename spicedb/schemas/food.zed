@@ -1,0 +1,25 @@
+definition restaurant {
+  relation tenant: tenant
+
+  relation owner: user
+  relation staff: user
+
+  permission manage = owner or staff
+  permission view = owner or staff or tenant->member
+}
+
+definition order {
+  relation restaurant: restaurant
+
+  relation customer: user
+  relation delivery_agent: user
+
+  permission view =
+    customer or delivery_agent or restaurant->staff
+
+  permission update =
+    delivery_agent or restaurant->staff
+
+  permission cancel =
+    customer or restaurant->staff
+}

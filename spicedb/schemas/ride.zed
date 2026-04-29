@@ -1,0 +1,32 @@
+definition driver {
+  relation tenant: tenant
+  relation user: user
+
+  permission access = user
+}
+
+definition rider {
+  relation tenant: tenant
+  relation user: user
+
+  permission access = user
+}
+
+definition trip {
+  relation tenant: tenant
+
+  relation rider: user
+  relation driver: user
+
+  permission view =
+    rider or driver or tenant->member
+
+  permission start =
+    driver
+
+  permission cancel =
+    rider or tenant->admin
+
+  permission admin =
+    tenant->admin
+}

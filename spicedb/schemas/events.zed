@@ -1,0 +1,27 @@
+definition event {
+  relation tenant: tenant
+
+  relation organizer: user
+  relation attendee: user
+
+  permission view =
+    organizer or attendee or tenant->member
+
+  permission manage =
+    organizer or tenant->admin
+}
+
+definition ticket {
+  relation event: event
+
+  relation holder: user
+
+  permission view =
+    holder or event->organizer
+
+  permission transfer =
+    holder
+
+  permission admin =
+    event->organizer
+}
